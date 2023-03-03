@@ -1,12 +1,22 @@
  <?php
-session_start();
-$id=$_SESSION['id'];
-if (! empty($_SESSION['logged_in'])) {
-    # code...
-?>
+include '../connection.php';
+session_start(); 
+error_reporting(0);
+$uid = $_SESSION['id'];
+if($_SESSION['id']==""){
+  header('location:sign in.php');
+}
+$sql = mysqli_query($con,"SELECT * from register where id='$uid'");
+while($row=mysqli_fetch_array($sql)){
+  $name = $row['username'];
+ 
+}
+    $sql = mysqli_query($con,"SELECT * FROM category");
+    $sid=1;
+    $sid = $_GET['id'];
+    
 
-
-
+	?>
 <!DOCTYPE html>
 <html lang="en"><!-- Basic -->
 <head>
@@ -48,7 +58,7 @@ if (! empty($_SESSION['logged_in'])) {
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<a class="navbar-brand" href="index.php">
-				
+				<p class=""><i class=""></i><h3><b>WELCOME</b></h3><b><h2></h2></b></strong></p>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
@@ -56,18 +66,9 @@ if (! empty($_SESSION['logged_in'])) {
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="package.php">Package</a></li>
 						<li class="nav-item"><a class="nav-link" href="placeorder.php">Place Product Order</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="serviceboooking.php">Booking</a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">My Cart</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="cart.php">Product Cart</a>
-								
-								<!--<a class="dropdown-item" href="../logout.php">Movie Ticket Cart</a>-->
-							</div>
-						</li>
+						<li class="nav-item"><a class="nav-link" href="cart.php">My cart</a></li>
 						<!--<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>-->
 						<!--<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
@@ -77,7 +78,6 @@ if (! empty($_SESSION['logged_in'])) {
 								<a class="dropdown-item" href="gallery.html">Gallery</a>
 							</div>
 						</li>-->
-						
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">My Account</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
@@ -86,7 +86,6 @@ if (! empty($_SESSION['logged_in'])) {
 								<a class="dropdown-item" href="../logout.php">Logout</a>
 							</div>
 						</li>
-						
 					</ul>
 				</div>
 			</div>
@@ -95,36 +94,50 @@ if (! empty($_SESSION['logged_in'])) {
 	<!-- End header -->
 	
 	<!-- Start slides -->
-	
-	
+	<div class="side">
+            <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+                
+            </div>
 	<!-- End slides -->
 	
 	<!-- Start About -->
-                       
-	<!-- End About -->
-	
-	<!-- Start QT -->
-	<!--<div class="qt-box qt-background">
+	<!--<div class="about-section-box">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 ml-auto mr-auto text-center">
-					<p class="lead ">
-						" If you're not the one cooking, stay out of the way and compliment the chef. "
-					</p>
-					<span class="lead">Michael Strahan</span>
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+					<div class="inner-column">
+						<h1>CRUISELINER</span></h1>
+						<p>Perhaps this cruise ship fact isn’t a fun one, but it’s true. Many people wonder if cruise ships have a morgue on board, and they do. This isn’t something cruise lines publicize, but of course people can die anywhere, even on a cruise vacation. So, all cruise ships sail with a morgue, usually located on the lowest decks away from passengers.</p>
+						<p>This may go without saying for seasoned cruisers, but this fact might surprise you if you’re cruising for the first time. Internet on a cruise just isn’t the same as at a land resort.Wifi has been limited, slow and pretty expensive for years. However, this is changing. We’re now seeing that cruise ship internet is making strides, and is faster and less expensive than in the past. An example of this is the innovative Princess Cruises Ocean Medallion, which has the fast and affordable MedallionNet.</p>
+						
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="images/port-img7.jpg" alt="" class="img-fluid">
 				</div>
 			</div>
 		</div>
 	</div>-->
+	<!-- End About -->
+	
+	<!-- Start QT -->
+	<div class="">
+		<div class="container">
+			<div class="row">
+				
+			</div>
+		</div>
+	</div>
 	<!-- End QT -->
 	
 	<!-- Start Menu -->
-	<!--<div class="menu-box">
+	<div class="menu-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Special Menu</h2>
+						<h4>Service</h4>
+						<h2>Service</h2>
 						
 						
 					</div>
@@ -133,93 +146,98 @@ if (! empty($_SESSION['logged_in'])) {
 			
 			<div class="row inner-menu-box">
 			
-				<div class="col-3">
+				<div class="">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 					
 						
-						<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">All</a>
-						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Drinks</a>
-						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Lunch</</a>
-						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Dinner</a>
-					</div>
-				</div>
-				
-				<div class="col-9">
-					<div class="tab-content" id="v-pills-tabContent">
-						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-							
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>-->
+
+                        <div class="row product-categorie-box">
+    
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade show active" id="">
+                                    <div class="row">
+                                    <?php  
+                                    $result = mysqli_query($con,"SELECT * FROM product");
+                                    while ($raw = mysqli_fetch_array($result)){ ?>
+                                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                        <form method="post"  enctype="multipart/form-data" action="">
+                                            <div class="products-single fix">
+                                                <div class="box-img-hover">
+                                                   
+                                                    <img src="images/<?php echo $raw['file']; ?>" class="img-fluid" alt="Image" style="height: 188px;">
+                                                   
+                                                </div>
+                                                <div class="why-text">
+                                                    <h4 align="center"><?php echo $raw['name']; ?></h4>
+                                                    
+                                                    <input type="hidden" name="productid" value="<?php echo $raw['pid']; ?>"> 
+                                                    <a class="nav-link" id="<?php echo $raw['pid']; ?>" href="listbox.php?pid=<?php echo $raw['pid']; ?>" role="tab" aria-controls="<?php echo $raw['pid']; ?>" aria-selected="true" align="center">Order</a>
+                                                </div>
+                                            </div>
+                                            </form>
+                                        </div>
+                                        <?php } ?>	
+                                    </div>
+                                </div>
+                                
+                                     
+                             
+                            </div>
+                            </div>
+                    </div>
+                        </div>
+	        </div>
+	    </div>		
+	</div>
 	<!-- End Menu -->
 	
 	<!-- Start Gallery -->
-	<div class="menu-box">
+	<!--<div class="gallery-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-					    <h6>My Orders</h6>
-						<h2>My Orders</h2>
-						
+						<h2>Gallery</h2>
 						
 					</div>
 				</div>
 			</div>
-			<table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-							
-                                <th>Product Name</th>
-
-                                  <th>Price</th>
-                                  <th>Quantity</th>
-                                
-                                 
-                            </tr>
-                        </thead>
-                        <tbody>
-<?php
-                                    include '../connection.php';									 
-                                    $rs=mysqli_query($con, "select order_tbl.login_id,order_tbl.id,tbl_cart.price,tbl_cart.quantity,product.name from tbl_cart,order_tbl,product where order_tbl.login_id=tbl_cart.loginid and tbl_cart.pid=product.pid and order_tbl.login_id='$id';");
-									while($raw= mysqli_fetch_assoc($rs)){
-										$t=$raw['id'];
-										// $te=mysqli_query($con,"select *from food where fid='$t'");
-										// $productname=$row['name'];
-										// $row=mysqli_fetch_array($te);
-										
-										
-									    $b=$raw['login_id'];
-										$r=mysqli_query($con, "select *from register where loginid='$b'");
-										$ro=mysqli_fetch_array($r);
-										//$a=$ro['status'];
-										
-										// $n=$raw['fname'];
-										// $d=$raw['totalprice'];
-										// $f=$raw['quantity'];
-
-                                        ?>
-										
-                                      
-												
-												<tr>	 
-														 <td data-column="Item"> <?php echo $raw['name']; ?></td>
-														 <td data-column="Item"> <?php echo $raw['price']; ?></td>
-														 <td data-column="Item"> <?php echo $raw['quantity']; ?></td>
-														  
-							<?php 
-												} 
-												?>
-                                                      							    		
-               </tbody>
-                    </table>
+			<div class="tz-gallery">
+				<div class="row">
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-01.jpg">
+							<img class="img-fluid" src="images/gallery-img-01.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-02.jpg">
+							<img class="img-fluid" src="images/gallery-img-02.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-03.jpg">
+							<img class="img-fluid" src="images/gallery-img-03.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-04.jpg">
+							<img class="img-fluid" src="images/gallery-img-04.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-05.jpg">
+							<img class="img-fluid" src="images/gallery-img-05.jpg" alt="Gallery Images">
+						</a>
+					</div> 
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-06.jpg">
+							<img class="img-fluid" src="images/gallery-img-06.jpg" alt="Gallery Images">
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+	</div>-->
 	<!-- End Gallery -->
 	
 	<!-- Start Customer Reviews -->
@@ -278,61 +296,43 @@ if (! empty($_SESSION['logged_in'])) {
 	<!-- End Customer Reviews -->
 	
 	<!-- Start Contact info -->
-	
-	<!-- End Contact info -->
-	
-	<!-- Start Footer -->
-	<footer class="footer-area bg-f">
+	<!--<div class="contact-imfo-box">
 		<div class="container">
-			<!--<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<h3>About Us</h3>
-					<p>Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui.</p>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Subscribe</h3>
-					<div class="subscribe_form">
-						<form class="subscribe_form">
-							<input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..." type="email">
-							<button type="submit" class="submit">SUBSCRIBE</button>
-							<div class="clearfix"></div>
-						</form>
+			<div class="row">
+				<div class="col-md-4 arrow-right">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>Phone</h4>
+						<p class="lead">
+							+01 123-456-4590
+						</p>
 					</div>
-					<ul class="list-inline f-social">
-						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					</ul>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Contact information</h3>
-					<p class="lead">Ipsum Street, Lorem Tower, MO, Columbia, 508000</p>
-					<p class="lead"><a href="#">+01 2000 800 9999</a></p>
-					<p><a href="#"> info@admin.com</a></p>
+				<div class="col-md-4 arrow-right">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Email</h4>
+						<p class="lead">
+							yourmail@gmail.com
+						</p>
+					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Opening hours</h3>
-					<p><span class="text-color">Monday: </span>Closed</p>
-					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
-				</div>
-			</div>
-		</div>-->
-		
-		<div class="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<p class="company-name">COLORMYWORLD</p>
+				<div class="col-md-4">
+					<i class="fa fa-map-marker"></i>
+					<div class="overflow-hidden">
+						<h4>Location</h4>
+						<p class="lead">
+							800, Lorem Street, US
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-	</footer>
+	</div>-->
+	<!-- End Contact info -->
+	
+	<!-- Start Footer -->
+	
 	<!-- End Footer -->
 	
 	<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
@@ -351,8 +351,3 @@ if (! empty($_SESSION['logged_in'])) {
     <script src="js/custom.js"></script>
 </body>
 </html>
-<?php
-}
-else
-header('location:../sign in.php');
-?>

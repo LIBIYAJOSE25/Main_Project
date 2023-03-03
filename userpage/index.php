@@ -63,7 +63,7 @@ if (! empty($_SESSION['logged_in'])) {
 						<li class="nav-item"><a class="nav-link" href="package.php">Package</a></li>
 						<li class="nav-item"><a class="nav-link" href="placeorder.php">Place Product Order</a></li>
 						<li class="nav-item"><a class="nav-link" href="myorderdetails.php">My Order Details</a></li>
-						<li class="nav-item"><a class="nav-link" href="serviceboooking.php">Booking</a></li>
+						<li class="nav-item"><a class="nav-link" href="serviceboooking.php">Booking Service</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">My Cart</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">

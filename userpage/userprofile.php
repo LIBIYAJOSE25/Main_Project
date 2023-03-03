@@ -58,9 +58,9 @@ $row=mysqli_fetch_array($res);
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="package.php">Package</a></li>
-						<li class="nav-item"><a class="nav-link" href="placeorder.php">Place Food Order</a></li>
+						<li class="nav-item"><a class="nav-link" href="placeorder.php">Place Product Order</a></li>
 						
-						<li class="nav-item"><a class="nav-link" href="ticketboooking.php">Movie Ticket Booking</a></li>
+						<li class="nav-item"><a class="nav-link" href="serviceboooking.php">Service Booking</a></li>
 						<li class="nav-item"><a class="nav-link" href="cart.php">My cart</a></li>
 						<!--<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>-->
 						<!--<li class="nav-item dropdown">
@@ -342,7 +342,7 @@ document.getElementById('msg4').innerHTML=" ";
 					lng: -74.0059731,
 					marker: true,
 					title: 'Marker title',
-					infoWindow: 'Live Dinner Restaurant'
+					infoWindow: 'Live Painting service'
 				}
 			]
 		});	

@@ -269,7 +269,7 @@ var pas1=document.getElementById("pass");
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<p class="company-name">CRUISELINER</p>
+						<p class="company-name">COLORMYWORLD</p>
 					</div>
 				</div>
 			</div>
@@ -302,7 +302,7 @@ var pas1=document.getElementById("pass");
 					lng: -74.0059731,
 					marker: true,
 					title: 'Marker title',
-					infoWindow: 'Live Dinner Restaurant'
+					infoWindow: 'Live Painting Service'
 				}
 			]
 		});	

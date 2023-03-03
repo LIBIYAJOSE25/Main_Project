@@ -84,7 +84,7 @@
                                 <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:300px;">
                                     <tr>
                                         <td align="left" valign="top" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 36px; font-weight: 800; line-height: 48px;" class="mobile-center">
-                                            <h1 style="font-size: 36px; font-weight: 800; margin: 0; color: #ffffff;">CRUISELINER</h1>
+                                            <h1 style="font-size: 36px; font-weight: 800; margin: 0; color: #ffffff;">COLORMYWORLD</h1>
                                         </td>
                                     </tr>
                                 </table>
@@ -112,7 +112,7 @@
                             <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
                                 <tr>
                                     <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;"> <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120" style="display: block; border: 0px;" /><br>
-                                        <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;"> YOUR TICKET IS BOOKED </h2>
+                                        <h2 style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;"> YOUR SERVICE IS BOOKED </h2>
                                     </td>
                                 </tr>
                                 <tr>

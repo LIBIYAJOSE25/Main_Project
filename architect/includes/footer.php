@@ -3,7 +3,7 @@
                 <div class="content py-20 font-size-xs clearfix">
                     
                     <div class="float-left">
-                       <h5 style="color: red"> Cruiseliner </h5>
+                       <h5 style="color: red"> ColorMyWorld </h5>
                     </div>
                 </div>
             </footer>

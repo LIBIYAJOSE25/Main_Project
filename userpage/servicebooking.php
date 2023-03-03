@@ -28,7 +28,7 @@ if(isset($_POST['update'])){
 
     $sqll = "UPDATE booking_tbl SET days=$days,totalprice=$total where id=$cartid";
     mysqli_query($con,$sqll);
-	echo"<script>alert('Movie Price Updated');</script>";
+	echo"<script>alert('Service Price Updated');</script>";
 echo"<script>window.location='servicebooking.php';</script>";
     
     
@@ -45,7 +45,7 @@ if(isset($_POST['order'])){
      
 
     }
-    echo"<script>window.location='moviecheckout.php';</script>";
+    echo"<script>window.location='servicecheckout.php';</script>";
 }
 	
 
@@ -112,13 +112,13 @@ if(isset($_POST['order'])){
 						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="package.php">Package</a></li>
 						<li class="nav-item"><a class="nav-link" href="placeorder.php">Place Product Order</a></li>
-						<li class="nav-item"><a class="nav-link" href="placedrink.php">Drink Order</a></li>
+						
 						<li class="nav-item"><a class="nav-link" href="serviceboooking.php">Booking</a></li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">My Cart</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="cart.php">product Cart</a>
-								<a class="dropdown-item" href="cartdrink.php">Drinks Cart</a>
+								
 						<!--<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>-->
 						<!--<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
@@ -259,7 +259,7 @@ if(isset($_POST['order'])){
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <div class="update-box">
-                        <input value="Book Ticket" type="submit" name="order" style="border: none;color: #fff; background-color:#146eb4 ;">
+                        <input value="Book Service" type="submit" name="order" style="border: none;color: #fff; background-color:#146eb4 ;">
                     </div>
                 </div>
 						</div>

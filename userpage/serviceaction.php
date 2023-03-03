@@ -1,9 +1,9 @@
  <?php
  include '../connection.php';
- if(isset($_POST['movie'])){
+ if(isset($_POST['service'])){
     session_start(); 
     $uid = $_SESSION['id'];
-    $sid = $_GET['serviceid'];
+    $sid = $_GET['seid'];
     $sql = mysqli_query($con,"SELECT * from service where seid='$sid'");
     $data=mysqli_fetch_array($sql);
     $imageurl='images'.$data["image"];
@@ -22,8 +22,8 @@
     $products = mysqli_query($con,$product);
     $totalprice=0;
     $totalprice=$days*$pprice;
-     $sql2 = "INSERT INTO `booking_tbl`(`loginid`,`seid`,`days`,`price`,`totalprice`,`status`) VALUES('$uid','$sid','$days','$pprice','$totalprice',1)";
-       $food = mysqli_query($con,$sql2);
+    $sql2 = "INSERT INTO `booking_tbl`(`loginid`,`seid`,`days`,`price`,`totalprice`,`status`) VALUES('$uid','$sid','$days','$pprice','$totalprice',1)";
+       $product = mysqli_query($con,$sql2);
 	}
 	  
    

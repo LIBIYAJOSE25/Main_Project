@@ -319,7 +319,7 @@ button:focus{
 
 .about-section-box{
 	padding: 70px 0px;
-	background: #ffffff url(../images/.jpg) no-repeat bottom center;
+	background: #ffffff url(../images/image7.jpg) no-repeat bottom center;
 	background-size: cover;
 }
 .about-section-box .img-fluid{
@@ -774,7 +774,7 @@ button:focus{
 
 .page-breadcrumb {
     padding: 250px 0 150px;
-    background: url(../images/all-bg.jpg) no-repeat;
+    background: url(../images/image7.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 0;

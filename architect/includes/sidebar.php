@@ -27,9 +27,9 @@
 
                                 <!-- Logo -->
                                 <div class="content-header-item">
-                                    <a class="link-effect font-w700" href="waiter.php">
+                                    <a class="link-effect font-w700" href="architect.php">
                                       
-                                        <span class="font-size-xl text-dual-primary-dark"></span><span class="font-size-xl text-primary">Waiter</span>
+                                        <span class="font-size-xl text-dual-primary-dark"></span><span class="font-size-xl text-primary">Architect</span>
                                     </a>
                                 </div>
                                 <!-- END Logo -->
@@ -48,7 +48,7 @@
 
                             <!-- Visible only in normal mode -->
                             <div class="sidebar-mini-hidden-b text-center">
-                                <a class="img-link" href="waiter.php">
+                                <a class="img-link" href="architect.php">
                                     <img class="img-avatar" src="assets/img/avatars/avatar15.jpg" alt="">
                                 </a>
                                 <ul class="list-inline mt-10">

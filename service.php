@@ -32,11 +32,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- banner section -->
+
 <section class="inner-banner">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<h2 class="page-header text-center">Our Services</h2>
+					<h2 class="page-header text-center">Our Services</h2>
 			</div>
 		</div>
 	</div>

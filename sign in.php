@@ -12,8 +12,10 @@
 	width: 100%;
 	margin:  0 auto;
 	/*background-color:#f0f8ff;*/
-	background-image:url(images/.jpg) ;
-    
+	background-image:url(images/image6.jpg);
+    background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
 	display: flex;
 	display: -webkit-flex;
 	justify-content: center;
@@ -189,7 +191,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	<div class="page-content">
 		<div class="form-v6-content">
 			<div class="form-left">
-				<img src="images/image1.jpg" alt="form">
+				<img src="images/image1.jpg" height="500" width="500" alt="form">
 			</div>
 			<form class="form-detail" action="loginacc.php" method="POST">
 				<h2>Login</h2>

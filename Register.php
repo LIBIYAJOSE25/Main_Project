@@ -14,7 +14,7 @@
 	/*background-image: -moz-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
     background-image: -webkit-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
     background-image: -ms-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);*/
-	background-image:url(images/login3.jpg) ;
+	background-image:url(images/bg1.png) ;
 	display: flex;
 	display: -webkit-flex;
 	justify-content: center;
@@ -190,7 +190,7 @@ input:-moz-placeholder { /* Firefox 18- */
 	<div class="page-content">
 		<div class="form-v6-content">
 			<div class="form-left">
-			<img src="images/image1.jpg" alt="form">
+			<img src="images/l1.jpg" width="500" height="780" alt="form">
 			</div>
 			<form class="form-detail" action="registeracc.php" method="POST">
 

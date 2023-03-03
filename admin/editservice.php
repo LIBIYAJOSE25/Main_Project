@@ -44,7 +44,7 @@
    // $officer_password = $_POST['password'];
     
    
-    mysqli_query($con,"UPDATE `service` SET `seid`='$seid',`sname`='$sname',`description`='$description',`stime`='$stime',`etime`='$etime',`image`='$image' where seid='$seid'");
+   mysqli_query($con,"UPDATE `service` SET `seid`='$seid',`sname`='$sname',`description`='$description',`stime`='$stime',`etime`='$etime',`image`='$image' where seid='$seid'");
     
             header('location: viewservice.php');
      }
@@ -101,7 +101,7 @@
 										<!--<div class="form-group row">
                                             <label class="col-12" for="register1-username">Cast</label>
                                             <div class="col-12">
-                                                <input type="text" class="form-control" name="cast" id="cast" onfocusout="f1()" value="<?php echo $cast ?>" required onChange="Valr();">
+                                                <input type="text" class="form-control" name="cast" id="cast" onfocusout="f1()" value="" required onChange="Valr();">
                                             </div>
                                         </div>-->
 										<div class="form-group row">
@@ -114,20 +114,20 @@
                                         <!--<div class="form-group row">
                                             <label class="col-12" for="register1-email">Date</label>
                                             <div class="col-12">
-                                                 <input type="date" class="form-control" name="date"  id="date"    onfocusout="f1()" value="<?php echo $date?>">
+                                                 <input type="date" class="form-control" name="date"  id="date"    onfocusout="f1()" value=""-->
                                             </div>
                                         </div>-->
                                         <div class="form-group row">
                                             <label class="col-12" for="register1-password">Service Start Time</label>
                                             <div class="col-12">
-                                                <input type="text" class="form-control" name="stime"  id="stime"  onfocusout="f1()" value="<?php echo $stime?>" required onChange="Vallawcr();">
+                                                <input type="time" class="form-control" name="stime"  id="stime"  onfocusout="f1()" value="<?php echo $stime?>" required onChange="Vallawcr();">
                                             </div>
                                         </div>
 
                                         <div class="form-group row">
                                             <label class="col-12" for="register1-password">Service End Time</label>
                                             <div class="col-12">
-                                                <input type="text" class="form-control" name="etime"  id="etime"  onfocusout="f1()" value="<?php echo $etime?>" required onChange="Vallawcr();">
+                                                <input type="time" class="form-control" name="etime"  id="etime"  onfocusout="f1()" value="<?php echo $etime?>" required onChange="Vallawcr();">
                                             </div>
                                         </div>
 
@@ -135,7 +135,7 @@
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-12">
-                                                <button type="submit" class="btn btn-alt-success" sname="s">
+                                                <button type="submit" class="btn btn-alt-success" name="s">
                                                     <i class=""></i> Update
                                                 </button>
 												<button type="submit" class="btn btn-alt-success" >
