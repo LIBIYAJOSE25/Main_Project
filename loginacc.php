@@ -4,11 +4,11 @@
 
 
                            
-                                $myuser = $_POST['username'];
-                                $mypass = $_POST['password'];
+                                $email = $_POST['email'];
+                                $password = $_POST['password'];
 
 
-                                    $sql = "SELECT * FROM login WHERE username = '$myuser' and password = '$mypass' and type1='admin' and status='1'";
+                                    $sql = "SELECT * FROM login WHERE email = '$email' and password = '$password' and type1='admin' and status='1'";
                                     $result = mysqli_query($con, $sql);
 
                                     $COUNT = mysqli_num_rows($result);
@@ -25,7 +25,7 @@
 
                             
                             
-                                    $sqll = "SELECT * FROM login WHERE username = '$myuser' and password = '$mypass' and type1='user' and status='1'";
+                                    $sqll = "SELECT * FROM login WHERE email = '$email' and password = '$password' and type1='user' and status='1'";
                                     $result1 = mysqli_query($con, $sqll);
 
                                     $COUNT1 = mysqli_num_rows($result1);
@@ -40,7 +40,7 @@
                                     }
                             
 
-                                    $sq = "SELECT * FROM login WHERE username = '$myuser' and password = '$mypass' and type1='headcook' and status='1'";
+                                    $sq = "SELECT * FROM login WHERE email = '$myuser' and password = '$mypass' and type1='head' and status='1'";
                                     $result2 = mysqli_query($con, $sq);
 
                                     $COUNT2 = mysqli_num_rows($result2);
@@ -50,10 +50,10 @@
                                         // echo $row['loginid'];
                                         $_SESSION['id']=$row['loginid'];
                                          $_SESSION['logged_in'] = true;
-                                       header("location: headcook/headcook.php");
+                                       header("location: head/head.php");
 
                                     }
-									$sq2 = "SELECT * FROM login WHERE username = '$myuser' and password = '$mypass' and type1='waiter' and status='1'";
+									$sq2 = "SELECT * FROM login WHERE email = '$myuser' and password = '$mypass' and type1='architect' and status='1'";
                                     $result3 = mysqli_query($con, $sq2);
 
                                     $COUNT3 = mysqli_num_rows($result3);
@@ -63,7 +63,7 @@
                                         // echo $row['loginid'];
                                         $_SESSION['id']=$row['loginid'];
                                          $_SESSION['logged_in'] = true;
-                                       header("location: waiter/waiter.php");
+                                       header("location: architect/architect.php");
 
                                     }
 									

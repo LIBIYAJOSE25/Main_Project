@@ -7,7 +7,7 @@ if (! empty($_SESSION['logged_in'])) {
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
     <head>
- <title>Cruiseliner-Admin Dashboard</title>
+ <title>ColorMyWorld-Admin Dashboard</title>
 <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
 
 </head>
@@ -25,13 +25,13 @@ if (! empty($_SESSION['logged_in'])) {
                 <div class="content">
                 
                     <!-- Register Forms -->
-                    <h2 class="content-heading">Add Headcook</h2>
+                    <h2 class="content-heading">Add Stock</h2>
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Bootstrap Register -->
                             <div class="block block-themed">
                                 <div class="block-header bg-gd-emerald">
-                                    <h3 class="block-title">Add Headcook</h3>
+                                    <h3 class="block-title">Add stock</h3>
                                     <div class="block-options">
                                         <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                                             <i class="si si-refresh"></i>
@@ -65,7 +65,7 @@ document.getElementById('msg1').innerHTML=" ";
     return true;
 }
 </script>
-                                        <div class="form-group row">
+                                       <!-- <div class="form-group row">
                                             <label class="col-12" for="register1-email">Age:</label>
                                             <div class="col-12">
                                                  <input type="number" class="form-control" name="age" id="age"  placeholder="Enter Age" value="" required onchange="Validage();" />
@@ -241,7 +241,7 @@ if ($uname!="")
              $row=mysqli_fetch_assoc($result);
 			 $email=$row['username'];
              $loid=$row['loginid'];
-             $sql = "INSERT INTO headcook (loginid,name,age,gender,phonenumber,email,file1,experiencedyears,idproof,status)values($loid,'$name','$age','$gender','$phonenumber','$email','$file1','$experiencedyears','$idproof',1)";
+             $sql = "INSERT INTO head (loginid,name,age,gender,phonenumber,email,file1,experiencedyears,idproof,status)values($loid,'$name','$age','$gender','$phonenumber','$email','$file1','$experiencedyears','$idproof',1)";
             mysqli_query($con, $sql);
 			 header("location:../src/verifymail.php?email=$email");
             ob_end_flush();

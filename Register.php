@@ -197,7 +197,7 @@ input:-moz-placeholder { /* Firefox 18- */
 
 				<h2>Registration</h2>
 				<div class="form-row">
-					<input type="text" name="fname" id="fname" class="input-text" placeholder="First Name" required onchange="Validate();">
+					<input autocomplete="off" type="text" name="fname" id="fname" class="input-text" placeholder="First Name" required onchange="Validate();">
 				</div>
 				<span id="msg1" style="color:red;"></span>
 				<script>		
@@ -216,7 +216,7 @@ input:-moz-placeholder { /* Firefox 18- */
 					}
 					</script>
 				<div class="form-row">stat
-					<input type="text" name="lname" id="lname" class="input-text" placeholder="Last Name" required onchange="Validate1();">
+					<input autocomplete="off" type="text" name="lname" id="lname" class="input-text" placeholder="Last Name" required onchange="Validate1();">
 				</div>
 				<span id="msg2" style="color:red;"></span>
 				<script>		
@@ -237,7 +237,7 @@ input:-moz-placeholder { /* Firefox 18- */
 					
 
 				<div class="form-row">
-					<input type="text" name="email" id="email" class="input-text" placeholder="Email Address" required onchange="Validatet();">
+					<input autocomplete="off" type="text" name="email" id="email" class="input-text" placeholder="Email Address" required onchange="Validatet();">
 				</div>
 				<span id="msg3" style="color:red;"></span>
 <script>		
@@ -257,7 +257,7 @@ document.getElementById('msg3').innerHTML=" ";
 </script>
 
 				<div class="form-row">
-					<input type="number" name="phone" maxlength="10" id="phone" class="input-text" placeholder="Phone no" required onchange="Validat();">
+					<input autocomplete="off" type="number" name="phone" maxlength="10" id="phone" class="input-text" placeholder="Phone no" required onchange="Validat();">
 				</div>
 				<span id="msg4" style="color:red;"></span>
 <script>		
@@ -324,7 +324,7 @@ document.getElementById('msg4').innerHTML=" ";
 				</div>-->
 				<div class="form-row">
 					<span class="lnr lnr-lock"></span>
-					<input type="password" name="password" id="password" class="input-text" placeholder="Password" required onchange="Validp();">
+					<input autocomplete="off" type="password" name="password" id="password" class="input-text" placeholder="Password" required onchange="Validp();">
 				</div>
 				<span id="msg9" style="color:red;"></span>
 <script>		
@@ -346,7 +346,7 @@ document.getElementById('msg9').innerHTML=" ";
 </script>
 				
 				<div class="form-row">
-					<input type="password" name="confirm_password" id="confirm_password" class="input-text" placeholder="Confirm Password" required onchange="check();">
+					<input autocomplete="off" type="password" name="confirm_password" id="confirm_password" class="input-text" placeholder="Confirm Password" required onchange="check();">
 				</div>
 				<span id="msg10" style="color:red;"></span>
 <script>		

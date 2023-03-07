@@ -9,20 +9,20 @@
     $room = $_POST['room'];*/
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
-    $s = "SELECT * FROM login WHERE username = '$email'";
+    $s = "SELECT * FROM login WHERE email = '$email'";
     $result1 = mysqli_query($con, $s);
     $row1=mysqli_fetch_assoc($result1);
-    $uname= isset($row1['username']) ? $row1['username'] : '';
+    $uname= isset($row1['email']) ? $row1['email'] : '';
 
     if($uname=="")
     {
             if($password===$confirm_password)
             {
-            $sq = "INSERT INTO login (username,password,type1,status) VALUES ('$email','$password','user','1')";
+            $sq = "INSERT INTO login (email,password,type1,status) VALUES ('$email','$password','user','1')";
            
              mysqli_query($con, $sq);
 
-              $sqll = "SELECT * FROM login WHERE username = '$email' and password = '$password' and type1 = 'user'";
+              $sqll = "SELECT * FROM login WHERE email = '$email' and password = '$password' and type1 = 'user'";
              $result = mysqli_query($con, $sqll);
             $no=mysqli_num_rows($result);
        

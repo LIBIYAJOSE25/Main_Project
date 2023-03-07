@@ -8,7 +8,7 @@
 <body>
 <?php
 session_start();
-$id=$_GET["id"];
+$id=$_GET["seid"];
 include '../connection.php';
 $sql2="update `service` set status='inactive' where seid=$id";
  mysqli_query($con, $sql2);

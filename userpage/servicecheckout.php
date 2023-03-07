@@ -206,7 +206,7 @@ while($row=mysqli_fetch_array($sql)){
                                 while ($raw = mysqli_fetch_array($result)){ ?>
                                         <div class="media-body"> <a href="cart.php"> <b><?php echo $raw['name']; ?></b></a>
 
-                                            <div class="large text-muted">Price: <?php echo $raw['price']; ?> <span class="mx-2"><br></span>Days Booked: <?php echo $raw['dayss']; ?> <br> Subtotal: <?php echo $raw['totalprice']; ?> </div>
+                                            <div class="large text-muted">Price: <?php echo $raw['price']; ?> <span class="mx-2"><br></span>Days Booked: <?php echo $raw['days']; ?> <br> Subtotal: <?php echo $raw['totalprice']; ?> </div>
                                         </div>
                                     </div>
                                 <?php } ?>

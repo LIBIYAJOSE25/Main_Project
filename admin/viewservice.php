@@ -74,8 +74,8 @@ while($r=mysqli_fetch_array($result))
 		<td><?php echo $r['price'];?></td>
         
         <td><img src="../uploads/<?php echo $r['image'];?>" width="100" height="100"></td>
-		<td><a style="color:blue" href="editservice.php?id=<?php echo $r['seid'];?>"><b>Edit</a></td>
-        <td><a style="color:#F63" href="deleteservice.php?id=<?php echo $r['seid'];?>"><b>Delete</a></td></tr>
+		<td><a style="color:blue" href="editservice.php?seid=<?php echo $r['seid'];?>"><b>Edit</b></a></td>
+        <td><a style="color:#F63" href="deleteservice.php?seid=<?php echo $r['seid'];?>"><b>Delete</b></a></td></tr>
                       <?php
 }
 ?>

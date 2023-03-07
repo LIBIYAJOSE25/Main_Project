@@ -28,14 +28,14 @@ if (! empty($_SESSION['logged_in'])) {
             <main id="main-container">
                 <!-- Page Content -->
                 <div class="content">
-                    <h2 class="content-heading">View Headcook</h2>
+                    <h2 class="content-heading">View stock</h2>
 
                    
 
                     <!-- Dynamic Table Full Pagination -->
                     <div class="block">
                         <div class="block-header block-header-default">
-                            <h3 class="block-title">View Headcook</h3>
+                            <h3 class="block-title">View stock</h3>
                         </div>
                         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/be_tables_datatables.js -->
@@ -73,7 +73,7 @@ while($r=mysqli_fetch_array($res))
 	 <td><img src="../uploads/<?php echo $r['file1'];?>" width="100" height="100"></td>
 	 <td><?php echo $r['experiencedyears'];?></td>
 	
-                <td><a style="color:red" href="deleteheadcook.php?id=<?php echo $r['loginid'];?>"><b>Delete</a></td></tr>
+                <td><a style="color:red" href="deletestock.php?id=<?php echo $r['loginid'];?>"><b>Delete</a></td></tr>
                       <?php
 }
 ?>

@@ -196,7 +196,7 @@ input:-moz-placeholder { /* Firefox 18- */
 			<form class="form-detail" action="loginacc.php" method="POST">
 				<h2>Login</h2>
 				<div class="form-row">
-					<input type="text" name="username" class="input-text" placeholder="Username">
+					<input autocomplete="off" type="text" name="email" class="input-text" placeholder="Username">
 				</div>
 				<div class="form-row">
 					<input type="password" name="password" class="input-text" placeholder="Password">
@@ -205,7 +205,8 @@ input:-moz-placeholder { /* Firefox 18- */
 					<input type="submit" name="login" class="register" value="Sign-In">				
 				</div>
 				<div>
-				<a href="index.php">Home</a>
+				<a href="index.php">Home</a>---------------------------
+				<a href="forgot.php">Forgot Password</a>
 				</div>
 			</form>
 		</div>

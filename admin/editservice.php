@@ -1,7 +1,7 @@
 <?php      
     include '../connection.php';
     $seid=$_GET['seid'];
-    $sql="select *from `service` where seid='$seid'";
+    $sql="select * from `service` where seid='$seid'";
     $result=mysqli_query($con,$sql);
     $row=mysqli_fetch_assoc($result);
     $sname=$row['sname'];
@@ -23,7 +23,7 @@
 	$description = $_POST['description'];
 	/*$date = $_POST['date'];*/  
     $stime = $_POST['stime'];
-    $etime = $_POST['etime']
+    $etime = $_POST['etime'];
     
     //$file = $_FILES['file']['name'];
 	//move_uploaded_file($_FILES["file"]["tmp_name"],"../uploads/$programid/".$_FILES["file"]["name"]);
@@ -116,7 +116,7 @@
                                             <div class="col-12">
                                                  <input type="date" class="form-control" name="date"  id="date"    onfocusout="f1()" value=""-->
                                             </div>
-                                        </div>-->
+                                        </div>
                                         <div class="form-group row">
                                             <label class="col-12" for="register1-password">Service Start Time</label>
                                             <div class="col-12">
