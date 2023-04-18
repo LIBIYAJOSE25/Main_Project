@@ -12,7 +12,7 @@ include '../connection.php'
 <!doctype html>
  <html lang="en" class="no-focus"> <!--<![endif]-->
  <head>
- <title>COLORMYWORLD</title>
+ <title>ColorMyWorld-Architect Dashboard</title>
  <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
     </head>
     <body>
